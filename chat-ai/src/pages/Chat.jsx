@@ -1,8 +1,8 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Box, Avatar, Typography, Button, IconButton } from "@mui/material";
-import red from "@mui/material/colors/red";
+import { red } from "@mui/material/colors";
 import { useAuth } from "../context/AuthContext";
-import Chatitem from "../components/chat/Chatitem";
+import ChatItem from "../components/chat/ChatItem";
 import { IoMdSend } from "react-icons/io";
 import {
   deleteChats,
@@ -171,7 +171,7 @@ const Chat = () => {
           }}
         >
           {chatMessages.map((chat, index) => (
-            <Chatitem content={chat.content} role={chat.role} key={index} />
+            <ChatItem content={chat.content} role={chat.role} key={index} />
           ))}
         </Box>
         <div
